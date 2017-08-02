@@ -1,0 +1,84 @@
+2.5:
+-----
+Static Pages
+Categories
+Tags
+Javascript variables.
+Comment Feeds
+get_terms instead of get_categories;
+Tags pages - have to map translated slugs to underlying slugs.
+
+
+2.Next:
+-------
+
+Bugs:
+previous page doesn't take you to the third page.
+in_category() problem possibly?
+category_counts padded too much, probably doesn't respect hide_empty = false.
+INSERT TABLE 'genericName' isn't allowed in FROM table list
+subpages broken when links not appended.
+feeds broken when links not appended.
+"Gengo reports: 150 Romanian posts & 12 English posts
+  Front page Gengo language switch reports: 89 Romanian posts & 12 English posts."
+posts page not always visible in wp_list_pages.  Will be fixed with No Language posts.
+
+Features:
+user-specified inclusions like wp-cache.
+Make inclusions exclusions regex based.
+filter get_option_text_direction() (bloginfo_textdirection)
+Filter on gengo_list_languages() to allow subdomain stuff.
+autochange the spellchecker if possible...
+autoload snippets like options.
+Transalpin's language control (gengo list languages argument, make_primary...)
+Default categories when creating a translation.
+No language - still create a wp-post2lang entry, but set langauge to 0, or no entry?  Will fix lots of plugin based errors.
+combined translation comments.
+language_locale.php for each language locale - look at 2.1 for more info.
+Better rtl.
+?translation_group=23
+make the_translations() more flexible.
+context-localised strings.
+- Role management: Editor cannot access â€œLanguagesâ€� screen, author can (solved?)
+
+Cleanup:
+move the caching into the_posts()
+JS correctly scoped and sorted, because it's crap at the moment.
+gengo.css
+Improve JSON completion messages.
+Remove deprecated functions.
+Remove javascript from the wp_head and admin_head functions. use new js L10n stuff.
+Category stuff to the category page, ui for descriptions
+
+
+
+
+
+- â€œSave Summaryâ€� button gone
+- Summaries donâ€™t show up on my blog! What am I doing wrong? (PHP4, MySQL 4.1. Your admin account is still active, if you want to check the templates.)
+- While weâ€™re at it: Cannot display uploaded images (wrong forum?)
+- <link hreflang> in header: urls to site.com without language codes probably wonâ€™t work. Should rewrite cookie (-> make primary)
+- Edit screen: Gengo widget should appear on top of the sidebar by default
+- Keep the list short: Do not allow posts to be marked as translations of pages (nor vice versa)
+- Automatically adopt page order or categories for all translations
+- Category synonyms for links donâ€™t work
+- Links to archives: Category names in URLs always in primary language (if â€œdisplay in a combination of languagesâ€� is on): Site.com/archive/category_name_in_primary_language/
+- language_contol doesnâ€™t append â€œ?language=â€� query string for mod_rewrite off
+
+
+Future:
+-------
+drag and drop post languages.
+blogging by email.
+Summaries page to quickly edit summary groups.  Similar to synonyms, AJAX based, pull from
+Smart summaries on the post screen. Major.
+Store summary author in the database? Poll.
+Merge translation and post group functions. Major.
+Add post to existing translation group. Minor.
+Summaries page. Major.
+Change GETs to POSTs or look at nonces.
+dbx language control box.
+Auto update notification?  Matt Read + Red Alt?
+WYSIWYG x2 Can't be easily done yet.  Significant refactoring to come in 2.1
+
+*/
